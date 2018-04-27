@@ -1,6 +1,5 @@
 package com.example.mobile.mvvmrxdeneme.displaySongs;
 
-import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -59,7 +58,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongAdapterVie
 
         public SongAdapterViewHolder(View view) {
             super(view);
-            tvArtistName = view.findViewById(R.id.tvArtistName);
+            tvArtistName = view.findViewById(R.id.tvSongNameDynamic);
         }
 
         public void bindData(final SongDetail songDetail) {

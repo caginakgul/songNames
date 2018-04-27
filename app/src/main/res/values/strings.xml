@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MvvmRxDeneme</string>
+    <string name="app_name">Good One</string>
+    <string name="song_name">Song Name: </string>
 </resources>

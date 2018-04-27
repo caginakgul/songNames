@@ -66,7 +66,7 @@ public class SongViewModal extends Observable {
         Request'i yapan Retrofit (SongServiceModule). Rx ise bu web request işlemini dinler.
          */
         appController.getAppComponent().inject(this);
-        Disposable disposable = songService.fetchSongs("search?term=ezhel&limit=5/") //Disposable observable yerine kullanılır
+        Disposable disposable = songService.fetchSongs("search?term=chao&limit=5/") //Disposable observable yerine kullanılır
                 .subscribeOn(appController.subscribeScheduler()) //Schedulers.io'ya subscribe oluyor. Scheduler io -> I/O Thread (doInBackground) start process
                 .observeOn(AndroidSchedulers.mainThread()) //observe the result on mainThread - similiar with onPostExecute
                 .subscribe(new Consumer<SongModal>() {
