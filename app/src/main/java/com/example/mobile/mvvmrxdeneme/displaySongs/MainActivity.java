@@ -12,25 +12,18 @@ import android.widget.TextView;
 
 import com.example.mobile.mvvmrxdeneme.R;
 import com.example.mobile.mvvmrxdeneme.databinding.ActivityMainBinding;
+import com.example.mobile.mvvmrxdeneme.displaySongs.SongAdapter;
+import com.example.mobile.mvvmrxdeneme.displaySongs.SongViewModal;
+
 import java.util.Observable;
 import java.util.Observer;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /*
 Bu sınıf veri çeken ViewModal sınıfını observe eder. Veri çekilme işlemi tamamlandığında UI'ı update eder.
  */
 
 public class MainActivity extends AppCompatActivity implements Observer{
-  /*  @BindView(R.id.tvGetSongs)
-    TextView tvGetSongs;*/
-
- /*   @BindView(R.id.recViewSongs)
-    RecyclerView recViewSongs;*/
-
-   /* @BindView(R.id.progressBar)
-    ProgressBar progressBar;*/
 
     private SongViewModal songViewModal;
     private ActivityMainBinding mainActivityBinding;
@@ -50,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements Observer{
     }
 
     /*
-    Bu metod data çekildikten sonra ui'da değişiklik yapılacağı zaman tetiklencek.
+    this method will be fired when data is received.
     RecyclerAdapter set edilcek
      */
     @Override
@@ -65,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements Observer{
 
     private void initBinding(){
         mainActivityBinding = DataBindingUtil.setContentView(this, R.layout.activity_main); //layoutu set ediyor.
-    //    ButterKnife.bind(this);
         songViewModal = new SongViewModal(this);
         mainActivityBinding.setSongViewModal(songViewModal);
     }

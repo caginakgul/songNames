@@ -44,7 +44,6 @@ public class SongViewModal extends Observable {
     @Inject
     SongService songService;
 
-
     /*
         init ve başlangıçtaki visibility durumları set ediliyor.
      */
@@ -55,6 +54,7 @@ public class SongViewModal extends Observable {
         progressBar = new ObservableInt(View.GONE);
         userRecycler = new ObservableInt(View.GONE);
         tvGetSongs = new ObservableInt(View.VISIBLE);
+
     }
 
     public void getSongs(){
